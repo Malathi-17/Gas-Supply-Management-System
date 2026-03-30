@@ -91,12 +91,11 @@ Create the required tables in Oracle SQL.
 Add the Oracle JDBC driver to your NetBeans project libraries.
 Update the database connection credentials in your Java files.
 Run the project from the main Java file.
-Sample Database Connection
+## Sample Database Connection
 
-## Use a JDBC connection similar to the following in your Java files:
+Use a JDBC connection similar to the following in your Java files:
 
 Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
-
 ## Important Note
 
 Ensure that your Oracle table column names exactly match the column names used in your Java SQL queries. If any column was created using double quotes, such as "Quantity", then the same exact case-sensitive name must be used in your SQL statements.
@@ -111,9 +110,9 @@ JDBC connectivity
 CRUD operations
 Inventory and order workflow implementation
 Real-time database interaction through desktop applications
-Future Enhancements
+## Future Enhancements
 
-## Possible improvements for this project include:
+Possible improvements for this project include:
 
 Role-based login for customer, retailer, and manufacturer
 Notification system for order status updates
@@ -122,7 +121,9 @@ Search and filter functionality
 Better UI design and dashboard navigation
 Secure password handling
 ## Author
-Malathi,Krithik Sai,Prawin
+Malathi
+Krithik Sai
+Prawin
 ## Conclusion
 
 The Gas Inventory Management System provides a structured and database-driven solution for managing gas orders and stock operations. It simplifies the workflow of order placement, verification, stock checking, delivery, and payment through a desktop application built using Java and Oracle SQL.
