@@ -1,14 +1,14 @@
-##Gas Inventory Management System
+## Gas Inventory Management System
 
 A desktop-based Gas Inventory Management System developed using Java (Swing GUI) in NetBeans with Oracle SQL as the backend database. The system is designed to manage the complete workflow of gas order processing, including customer order placement, order verification, stock checking, delivery handling, and payment recording.
 
-##Project Overview
+## Project Overview
 
 This application automates the operations of a gas distribution and inventory management process. It provides a structured workflow for handling gas orders, monitoring stock, updating inventory, and managing customer-related transactions through a Java-based desktop interface connected to an Oracle database using JDBC.
 
 The project demonstrates the integration of frontend development in Java Swing with backend database operations in Oracle SQL.
 
-##Features
+## Features
 Customer order placement
 Order verification by retailer or employee
 Stock availability checking
@@ -23,7 +23,7 @@ Java Swing
 NetBeans IDE
 Oracle SQL
 JDBC
-##Modules
+## Modules
 1. Customer Module
 
 This module allows the customer to:
@@ -62,7 +62,7 @@ Store payment amount and mode
 Maintain payment records for completed orders
 Database Tables Used
 
-##The project uses the following Oracle SQL tables:
+## The project uses the following Oracle SQL tables:
 
 Customer1
 Retailer1
@@ -76,7 +76,7 @@ Delivery1
 Payment1
 Workflow
 
-##The system follows this process:
+## The system follows this process:
 
 Customer places an order and data is inserted into Orders1.
 Retailer or employee verifies the order.
@@ -93,15 +93,15 @@ Update the database connection credentials in your Java files.
 Run the project from the main Java file.
 Sample Database Connection
 
-##Use a JDBC connection similar to the following in your Java files:
+## Use a JDBC connection similar to the following in your Java files:
 
 Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
 
-##Important Note
+## Important Note
 
 Ensure that your Oracle table column names exactly match the column names used in your Java SQL queries. If any column was created using double quotes, such as "Quantity", then the same exact case-sensitive name must be used in your SQL statements.
 
-##Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 
@@ -113,7 +113,7 @@ Inventory and order workflow implementation
 Real-time database interaction through desktop applications
 Future Enhancements
 
-##Possible improvements for this project include:
+## Possible improvements for this project include:
 
 Role-based login for customer, retailer, and manufacturer
 Notification system for order status updates
@@ -121,8 +121,8 @@ Feedback collection module
 Search and filter functionality
 Better UI design and dashboard navigation
 Secure password handling
-##Author
+## Author
 Malathi,Krithik Sai,Prawin
-##Conclusion
+## Conclusion
 
 The Gas Inventory Management System provides a structured and database-driven solution for managing gas orders and stock operations. It simplifies the workflow of order placement, verification, stock checking, delivery, and payment through a desktop application built using Java and Oracle SQL.
