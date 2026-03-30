@@ -24,7 +24,7 @@ NetBeans IDE
 Oracle SQL
 JDBC
 ## Modules
-1. Customer Module
+## 1. Customer Module
 
 This module allows the customer to:
 
@@ -32,28 +32,28 @@ Enter customer details
 Select gas type
 Enter quantity
 Place an order
-2. Order Verification Module
+## 2. Order Verification Module
 
 This module allows the retailer or employee to:
 
 View pending orders
 Verify or reject customer orders
 Move verified orders to the next step
-3. Stock Checking Module
+## 3. Stock Checking Module
 
 This module is used to:
 
 Fetch verified orders
 Match order details with available stock
 Check whether sufficient stock is available
-4. Delivery Module
+## 4. Delivery Module
 
 This module is used to:
 
 Confirm delivery details
 Update order status to "Delivered"
 Reduce stock quantity after successful delivery
-5. Payment Module
+## 5. Payment Module
 
 This module is used to:
 
