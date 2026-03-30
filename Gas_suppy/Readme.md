@@ -1,23 +1,20 @@
 Gas Inventory Management System
 
-A desktop-based Gas Inventory Management System developed using Java (Swing GUI) in NetBeans with Oracle SQL as the backend database.
-The system is designed to manage the complete workflow of gas order processing, including customer registration, order placement, verification, stock checking, delivery handling, payment recording, notifications, and feedback collection.
+A desktop-based Gas Inventory Management System developed using Java (Swing GUI) in NetBeans with Oracle SQL as the backend database. The system is designed to manage the complete workflow of gas order processing, including customer order placement, order verification, stock checking, delivery handling, and payment recording.
 
 Project Overview
 
-This application helps automate the operations of a gas distribution and inventory management process. It supports different stages of the supply workflow and provides a structured interface for handling customer orders and tracking stock availability.
+This application automates the operations of a gas distribution and inventory management process. It provides a structured workflow for handling gas orders, monitoring stock, updating inventory, and managing customer-related transactions through a Java-based desktop interface connected to an Oracle database using JDBC.
 
-The project was built as a database-driven desktop application and demonstrates the integration of Java frontend development with Oracle database operations using JDBC.
+The project demonstrates the integration of frontend development in Java Swing with backend database operations in Oracle SQL.
 
 Features
-Customer registration and data management
-Order placement by customers
-Order verification by retailer/employee
+Customer order placement
+Order verification by retailer or employee
 Stock availability checking
 Delivery processing
+Inventory update after delivery
 Payment recording
-Notification generation
-Feedback collection
 Oracle database integration
 Swing-based desktop user interface
 Technologies Used
@@ -26,47 +23,43 @@ Java Swing
 NetBeans IDE
 Oracle SQL
 JDBC
-Modules Included
+Modules
 1. Customer Module
 
-Allows customers to:
+This module allows the customer to:
 
-Register or enter details
-Place gas orders
-Select gas type and quantity
+Enter customer details
+Select gas type
+Enter quantity
+Place an order
 2. Order Verification Module
 
-Allows retailer or employee to:
+This module allows the retailer or employee to:
 
-View placed orders
-Verify or reject orders
-Move verified orders to the next stage
+View pending orders
+Verify or reject customer orders
+Move verified orders to the next step
 3. Stock Checking Module
 
-Used to:
+This module is used to:
 
 Fetch verified orders
-Check stock availability from the inventory
-Confirm whether the requested quantity is available
+Match order details with available stock
+Check whether sufficient stock is available
 4. Delivery Module
 
-Used to:
+This module is used to:
 
-Process confirmed deliveries
-Update order status
-Reduce stock after successful delivery
+Confirm delivery details
+Update order status to "Delivered"
+Reduce stock quantity after successful delivery
 5. Payment Module
 
-Used to:
+This module is used to:
 
-Record payment details for completed deliveries
-Store payment mode, amount, and related order details
-6. Notification and Feedback Module
-
-Used to:
-
-Notify customers regarding order progress
-Collect customer feedback after order completion
+Record payment details
+Store payment amount and mode
+Maintain payment records for completed orders
 Database Tables Used
 
 The project uses the following Oracle SQL tables:
@@ -81,56 +74,53 @@ Distribution
 Notification1
 Delivery1
 Payment1
-Feedback
 Workflow
 
-The system follows this workflow:
+The system follows this process:
 
-Insert Order → Orders1
-Verify Order → Retailer / Employee
-Check Stock → Stock
-Create Delivery → Delivery1
-Update Inventory → Stock
-Record Payment → Payment1
-Notify Customer → Notification1
-Collect Feedback → Feedback
+Customer places an order and data is inserted into Orders1.
+Retailer or employee verifies the order.
+Verified orders are checked against available stock in the Stock table.
+If stock is sufficient, delivery is processed.
+After delivery, stock is updated by reducing the delivered quantity.
+Payment details are recorded in the Payment1 table.
 How to Run the Project
 Open the project in NetBeans IDE.
 Make sure Oracle Database is running.
-Import or create the required tables in your Oracle SQL environment.
-Update your JDBC connection details in the Java files:
-Host
-Port
-SID / Service Name
-Username
-Password
-Add the Oracle JDBC driver (ojdbc) to your project libraries.
-Run the main Java files step by step or through your dashboard.
-Sample JDBC Connection
-con = DriverManager.getConnection(
-    "jdbc:oracle:thin:@localhost:1521:orcl",
-    "scott",
-    "tiger"
-);
+Create the required tables in Oracle SQL.
+Add the Oracle JDBC driver to your NetBeans project libraries.
+Update the database connection credentials in your Java files.
+Run the project from the main Java file.
+Sample Database Connection
+
+Use a JDBC connection similar to the following in your Java files:
+
+Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl", "scott", "tiger");
+
+Important Note
+
+Ensure that your Oracle table column names exactly match the column names used in your Java SQL queries. If any column was created using double quotes, such as "Quantity", then the same exact case-sensitive name must be used in your SQL statements.
+
 Learning Outcomes
 
 This project demonstrates:
 
-Java GUI development using Swing
-Oracle database design and integration
+Java Swing GUI development
+Oracle SQL integration
 JDBC connectivity
 CRUD operations
-Workflow-based desktop application design
-Real-time stock and order management concepts
+Inventory and order workflow implementation
+Real-time database interaction through desktop applications
 Future Enhancements
 
-Possible improvements include:
+Possible improvements for this project include:
 
 Role-based login for customer, retailer, and manufacturer
-Better dashboard navigation
-Report generation
+Notification system for order status updates
+Feedback collection module
 Search and filter functionality
-Automated stock alerts
-Improved UI design
+Better UI design and dashboard navigation
 Secure password handling
+Conclusion
 
+The Gas Inventory Management System provides a structured and database-driven solution for managing gas orders and stock operations. It simplifies the workflow of order placement, verification, stock checking, delivery, and payment through a desktop application built using Java and Oracle SQL.
